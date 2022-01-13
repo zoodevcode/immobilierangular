@@ -1,0 +1,32 @@
+<div class="container">
+  <div>
+    <h2>Ajouter un Bien</h2>
+  </div>
+  <form>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label for="">ID Bien</label>
+      <input type="text" [(ngModel)]="newBien.id" name="idBien" class="form-control">
+    </div>
+
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label for="">NOM Bien</label>
+      <input type="text" [(ngModel)]="newBien.nom" name="nomBien" class="form-control">
+    </div>
+
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label for="">PRIX Bien</label>
+      <input type="number" [(ngModel)]="newBien.prix" name="prixBien" class="form-control">
+    </div>
+
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label for="">DATE Bien</label>
+      <input type="date" [(ngModel)]="newBien.date" name="dateBien" class="form-control">
+    </div>
+    <div class="mt-2">
+      <button type="submit" class="btn-success" (click)="ajoutBien()">Ajouter</button>
+    </div>
+    <div>
+      <h3>{{message}}</h3>
+    </div>
+  </form>
+</div>

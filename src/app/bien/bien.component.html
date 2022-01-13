@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <div class="card shadow mb-4">
+    <div class="card-body ">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID:</th>
+            <th>NOM:</th>
+            <th>PRIX:</th>
+            <th>DATE:</th>
+            <th>ACTION:</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let bien of biens">
+          <tr>
+            <td>{{bien.id}}</td>
+            <td>{{bien.nom}}</td>
+            <td>{{bien.prix}}</td>
+            <td>{{bien.date | date: 'dd/MM/yyy'}}</td>
+            <td><a class="btn btn-danger" (click)="supprimer_bien(bien)">Supprimer</a></td>
+            <td><a class="btn btn-success" >Editer</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
